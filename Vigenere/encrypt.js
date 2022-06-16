@@ -14,7 +14,7 @@ function input() {
 }
 
 function mainF(key,original){
-    key=key.toUpperCase();
+    key=key.split(" ").join("").toUpperCase();
     var cleaned = original.split(" ").join("").toUpperCase();
     var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//0-25
     
