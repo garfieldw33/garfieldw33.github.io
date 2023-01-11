@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<script src="encrypt.js"></script>
+		
+  		<meta charset="utf-8">
+ 		<title>Vernam Cipher</title>
+	</head>
+	<body>
+		<p class="p1">Garfield 10/01/2022</p>
+		<a href="mailto://garfield.ke@connect.um.edu.mo">garfield.ke@connect.um.edu.mo</a>
+		
+		
+		<noscript>JavaScript NOT AVAILABLE</noscript>
+
+		<center>
+
+			<table>
+				<p class="p1">Vernam Cipher</p>
+				<a href="readme.txt">How to test?</a>
+				<tr><td align="left">Texts to encrypt/decrypt:</td></tr>
+				<tr><td><input id="texts" type="text" size="50" style="font-size:30px"/></td></tr>
+				
+				<tr><td align="left">Key: (leave it blank to use random keys for encryption)</td></tr>
+				<tr><td><input id="keys" type="text" size="50" style="font-size:30px"/></td></tr>
+				<tr><td align="right" >Encrypt:<input type="image" onclick="inputEnc()"></td></tr>
+
+				<tr><td align="right" >Decrypt:<input type="image" onclick="inputDec()"></td></tr>
+
+				<tr><td align="left">Key used:</td></tr>
+				<tr><td><p id="key_used">* * *</p></td></tr>
+
+				<tr><td align="left">Encrypted cipher:</td></tr>
+				<tr><td><p id="encrypted_results">* * *</p></td></tr>
+
+				<tr><td align="left">Decrypted plaintext:</td></tr>
+				<tr><td><p id="decrypted_results">* * *</p></td></tr>
+			</table>
+			
+			<tr><td align="right" >Leave (halt and close program): <input type="image" onclick="custom_close()"></td></tr>
+			
+		</center>
+
+	</body>
+</html>
