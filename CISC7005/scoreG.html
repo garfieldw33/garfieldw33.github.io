@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Seminars Marking Form</title>
+	<script>alert("1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload to UMMoodle")</script>
+    <style>
+        body {
+            font-family: Times New Roman, Times, serif;
+			font-size: 14px;
+            margin: 10px;
+        }
+        .container {
+            width: 210mm;
+            height: 270mm;
+            padding: 10mm;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: left;
+        }
+        .rotated {
+            writing-mode: vertical-rl;
+            transform: rotate(90deg);
+        }
+        .fillable {
+            width: 100%;
+            box-sizing: border-box;
+        }
+		.fillable_time {
+            width: 5%;
+            box-sizing: border-box;
+        }
+		.fillable_marker {
+            width: 20%;
+            box-sizing: border-box;
+        }
+        .comments {
+            height: 100px;
+        }
+        .print-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+		.lighter {
+		font-weight: lighter;
+		}
+		.bold {
+			font-weight: bold;
+		}
+
+		.bolder {
+			font-weight: bolder;
+		}
+    </style>
+</head>
+<body>
+	
+
+
+    <div class="container">
+		<p style="text-align:center">
+			<span class="bold">Computer Science Seminars</span><br />
+			<span class="bold">First Semester 2024/2025, Marking Form for Presentation</span>
+		  </p>
+        <div>
+            <p>Presenter’s Name: KE SIYUN &nbsp;&nbsp;&nbsp; Presenter’s Std No: 13</p>
+            <p>Seminar Title: Customized Image Aesthetics Assessment Method and Applications</p>
+            <p>Start time: 2024/11/29 <input type="text" class="fillable_time">:<input type="text" class="fillable_time">&nbsp;&nbsp;&nbsp;        End time: <input type="text" class="fillable_time">:<input type="text" class="fillable_time"></p>
+        </div>
+        <table class="table-container">
+            <tr>
+				<th rowspan="1"></th>
+				<th></th>
+				<th>Distribution</th>
+				<th>Mark</th>
+			</tr>
+			<tr>
+				<td rowspan="6" style=" transform: rotate(270deg);">Academic content</td>
+				<td>Knowledge displayed in understanding of the material by the presenter</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+
+			<tr>
+				<td>Adequate introduction and conclusion</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Adequate background, Comprehensive review on recent/related work</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Key points emphasized</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Presentation well structured</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Relevance</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td rowspan="7" style="writing-mode: vertical-rl; transform: rotate(270deg);">Presentation style</td>
+				<td>Proper use of presentational tools or Visual aids or Clarity of presentation material (Size of Fonts, Figures, Tables, etc)</td>
+				<td>(4%)</td>
+				<td><input type="number" class="fillable" min="0" max="4" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Ability to time/pace the seminar (start/finish on time and presented at a steady pace)</td>
+				<td>(5%)</td>
+				<td><input type="number" class="fillable" min="0" max="5" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Maintained interest of audience</td>
+				<td>(5%)</td>
+				<td><input type="number" class="fillable" min="0" max="5" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Made eye contact with audience</td>
+				<td>(5%)</td>
+				<td><input type="number" class="fillable" min="0" max="5" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Voice clearly audible to the whole class</td>
+				<td>(5%)</td>
+				<td><input type="number" class="fillable" min="0" max="5" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Responded well to questions</td>
+				<td>(6%)</td>
+				<td><input type="number" class="fillable" min="0" max="6" step="0.1"></td>
+			</tr>
+			<tr>
+				<td>Clarity of explanations, communicates complex ideas with ease and facility</td>
+				<td>(10%)</td>
+				<td><input type="number" class="fillable" min="0" max="10" step="0.1"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2" style="text-align: right; font-weight: bold;">Overall Mark for the Seminar (out of 100)</td>
+				<td><input type="number" class="fillable" readonly></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td colspan="2" style="text-align: left; font-weight: bold;">How much you have understood the seminar (0-100)</td>
+				<td><input type="text" class="fillable"></td>
+			</tr>
+        </table>
+        <div>
+            <p>Comments:</p>
+            <textarea class="fillable comments"></textarea>
+        </div>
+        <div>
+            <p><span class="bold">NAME OF MARKER:</span> <input type="text" class="fillable_marker"> &nbsp;&nbsp;&nbsp; <span class="bold">   STUDENT NUMBER:</span> <input type="text" class="fillable_marker"></p>
+            <p><span class="bold">MARKER’s SIGNATURE:</span> <input type="text" class="fillable_marker"> &nbsp;&nbsp;&nbsp; <span class="bold">DATE:</span> 29/11/2024</p>
+        </div>
+        <div>
+            <p>Note: Each talk will last for: <span class="bold">15 -20 mins</span></p>
+        </div>
+        <div class="print-button">
+            <button onclick="window.print()">Print</button>
+			<button onclick="showAlert()">Help</button>
+        </div>
+    </div>
+
+	
+    <script>
+        // JavaScript to calculate the overall mark
+        document.querySelectorAll('.fillable').forEach(input => {
+            input.addEventListener('input', calculateOverallMark);
+        });
+
+        function calculateOverallMark() {
+            let total = 0;
+            document.querySelectorAll('.fillable').forEach(input => {
+                if (input.type === 'number' && !input.readOnly) {
+                    total += parseFloat(input.value) || 0;
+                }
+            });
+            document.querySelector('.fillable[readonly]').value = total;
+        }
+		function showAlert() {
+			alert("1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload to UMMoodle");
+		}
+    </script>
+
+</body>
+</html>
