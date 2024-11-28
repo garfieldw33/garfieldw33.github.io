@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Seminars Marking Form</title>
-	<script>alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload PDF/screenshot to UMMoodle (DO NOT UPLOAD HTML FILE)")</script>
+	<script>
+		function showAlert() {
+			alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload PDF/screenshot to UMMoodle (DO NOT UPLOAD HTML FILE)");
+		}
+		showAlert()
+	</script>
+	
     <style>
         body {
             font-family: Times New Roman, Times, serif;
@@ -200,9 +206,7 @@
             });
             document.querySelector('.fillable[readonly]').value = total;
         }
-		function showAlert() {
-			alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload PDF/screenshot to UMMoodle (DO NOT UPLOAD HTML FILE)");
-		}
+		
     </script>
 
 </body>
