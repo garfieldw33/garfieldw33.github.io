@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation of Computer Science Seminar Report</title>
+	<script>
+	function showAlert() {
+		alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in the date, scores, comments (if any) (overall mark auto-summed)\n2- Click \"Print\" and print as PDF")
+	}
+	showAlert() 
+</script>
+	<style>
+
+		.trans-table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        .trans-table th, .trans-table td {
+            border: 1px solid #000;
+            padding: 0px;
+            text-align: left;
+        }
+
+        body {
+            font-family: Times New Roman, Times, serif;
+			font-size: 14px;
+            margin: 10px;
+        }
+        .container {
+            width: 210mm;
+            height: 270mm;
+            padding: 10mm;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+
+.transcript {
+    width: 100%;
+    border-collapse: collapse; /* Ensures single-line borders */
+    font-size: 12px; /* Sets the font size to 12px */
+}
+
+.transcript td, .transcript th {
+    border: 1px solid #000; /* Adds single-line borders */
+    padding: 2px; /* Minimizes space between contents and frames */
+}
+
+/* Left-align text in the first column */
+.transcript td:first-child, .transcript th:first-child {
+    text-align: left;
+}
+
+/* Right-align text in the second column */
+.transcript td:last-child, .transcript th:last-child {
+    text-align: left;
+}
+
+
+		.table-container th {
+    border: 1px solid #000;
+    padding: 2px;
+    text-align: center; /* Center align text in the top row */
+    font-weight: bold; /* Make the text bold */
+    font-size: larger; /* Increase the font size */
+}
+
+.table-container td {
+    border: 1px solid #000;
+    padding: 2px;
+    text-align: left; /* Keep the left alignment for table cells */
+}
+
+.table-container tr:first-child th {
+    text-align: center; /* Center align text in the top row */
+    font-weight: bold; /* Make the text bold */
+    font-size: larger; /* Increase the font size */
+}
+
+.table-container tr:not(:first-child) th {
+    text-align: left; /* Left align text in the left column */
+    font-weight: normal; /* Normal font weight for the left column */
+    font-size: 12px; /* Normal font size for the left column */
+}
+
+
+
+        .fillable {
+            width: 100%;
+            box-sizing: border-box;
+        }
+		.fillable_time {
+            width: 5%;
+            box-sizing: border-box;
+        }
+		.fillable_marker {
+            width: 20%;
+            box-sizing: border-box;
+        }
+        .comments {
+            height: 500px;
+        }
+        .print-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+		.lighter {
+		font-weight: lighter;
+		}
+		.bold {
+			font-weight: bold;
+		}
+
+		.bolder {
+			font-weight: bolder;
+		}
+    </style>
+</head>
+<body>
+	
+    <div class="container">
+		<p style="text-align:center">
+			<span class="bold">Evaluation of Computer Science Seminar Report</span><br />
+			<span class="bold">CISC7005</span>
+		</p>
+        <div>
+            <p>Student’s Name: KE SIYUN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student No: MC350809      </p>
+            <p>Title of Report: Customized Image Aesthetics Assessment Method and Applications</p>
+            <p>Academic Year: 24/25  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semester: 01</p> 
+			<p>Supervisor Name: Dr. Shu KONG  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date: <input type="text" class="fillable_time">/12/2024</p> 
+        </div>
+
+		<table class="table-container">
+            <tr>
+				<th>Points to be considered</th>
+				<th>Mark</th>
+			</tr>
+			<tr>
+				<th>
+					<p>(5%) Significance? (only applicable to research proposal)</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;• Originality?</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;• Degree of challenge?</p>
+				</th>
+				<th><input type="number" class="fillable" min="0" max="5" step="0.1"></th>
+			</tr>
+			<tr>
+				<th>
+					<p>(60%) Comprehensiveness? </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Scope and depth of analysis? </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Topic considered from a variety of perspectives?  </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Satisfactory use of resources, literature? Suitable number of references for the topic?</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;Suggest the report will be at least 10 pages, with main text at least 9 pages. -5 points for every page that is lacking, or justification needs to provided </p>
+				</th>
+				<th><input type="number" class="fillable" min="0" max="60" step="0.1"></th>
+			</tr>
+			<tr>
+				<th>
+					<p>(5%) Discussion relevant to the topic?</p>
+				</th>
+				<th><input type="number" class="fillable" min="0" max="5" step="0.1"></th>
+			</tr>
+			<tr>
+				<th>
+					<p>(5%) Comparison of alternatives? </p>
+				</th>
+				<th><input type="number" class="fillable" min="0" max="5" step="0.1"></th>
+			</tr>
+			<tr>
+				<th>
+					<p>(25%) Formatting? </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Contain report sections (Abstract, Introduction, Main Text, Conclusion, References)?  </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Proper citing of references?   </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Proper citing and captions for Tables and Figures? </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Overall clarity and style? </p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;•	Spelling, Grammar, Print Quality (text, figures, tables)? </p>
+				</th>
+				<th><input type="number" class="fillable" min="0" max="25" step="0.1"></th>
+			</tr>
+			<tr>
+				<td style="text-align: right; font-weight: bold;">Total</td>
+				<td><input type="number" class="fillable" readonly></td>
+			</tr>
+			
+        </table>
+		<table class="trans-table" style="border: none;">
+			<tr>
+				<td style="border: none;">	
+					&nbsp;&nbsp;				
+					<table class="transcript">
+						<tr> 
+							<td> Letter Grades </td>
+							<td> Percentage </td>
+						</tr>
+						<tr> 
+							<td> A </td>
+							<td> 93-100 </td>
+						</tr>
+						<tr> 
+							<td> A- </td>
+							<td> 88-92 </td>
+						</tr>
+						<tr> 
+							<td> B+ </td>
+							<td> 83-87 </td>
+						</tr>
+						<tr> 
+							<td> B </td>
+							<td> 78-82 </td>
+						</tr>
+						<tr> 
+							<td> B- </td>
+							<td> 73-77 </td>
+						</tr>
+						<tr> 
+							<td>&nbsp;</td>
+							<td>&nbsp; </td>
+						</tr>
+
+					</table>
+				</td>
+				<td style="border: none;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+				<td style="border: none;">
+					&nbsp;&nbsp;
+					<table class="transcript">
+						<tr> 
+							<td> Letter Grades </td>
+							<td> Percentage </td>
+						</tr>
+						<tr> 
+							<td> C+ </td>
+							<td> 68-72 </td>
+						</tr>
+						<tr> 
+							<td> C </td>
+							<td> 63-67 </td>
+						</tr>
+						<tr> 
+							<td> C- </td>
+							<td> 58-62 </td>
+						</tr>
+						<tr> 
+							<td> D+ </td>
+							<td> 53-57 </td>
+						</tr>
+						<tr> 
+							<td>D</td>
+							<td>50-52 </td>
+						</tr>
+						<tr> 
+							<td> F </td>
+							<td> Below 50 </td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+		</table>
+
+
+       
+    </div>
+	<div class="container">
+		<div>
+            <p>Comments:</p>
+            <textarea class="fillable comments"></textarea>
+        </div>
+        
+        <div class="print-button">
+            <button onclick="window.print()">Print</button>
+			<button onclick="showAlert()">Help</button>
+        </div>
+	</div>
+	
+    <script>
+        // JavaScript to calculate the overall mark
+        document.querySelectorAll('.fillable').forEach(input => {
+            input.addEventListener('input', calculateOverallMark);
+        });
+
+        function calculateOverallMark() {
+            let total = 0;
+            document.querySelectorAll('.fillable').forEach(input => {
+                if (input.type === 'number' && !input.readOnly) {
+                    total += parseFloat(input.value) || 0;
+					total = parseFloat(total.toFixed(1)); // Adjust the number of decimal places as needed
+                }
+            });
+            document.querySelector('.fillable[readonly]').value = total;
+        }
+
+    </script>
+
+</body>
+</html>
