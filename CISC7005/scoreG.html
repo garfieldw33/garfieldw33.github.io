@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Seminars Marking Form</title>
-	<script>alert("1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload to UMMoodle")</script>
+	<script>alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload PDF/screenshot to UMMoodle (DO NOT UPLOAD HTML FILE)")</script>
     <style>
         body {
             font-family: Times New Roman, Times, serif;
@@ -76,7 +76,7 @@
 			<span class="bold">First Semester 2024/2025, Marking Form for Presentation</span>
 		  </p>
         <div>
-            <p>Presenter’s Name: KE SIYUN &nbsp;&nbsp;&nbsp; Presenter’s Std No: 13</p>
+            <p>Presenter’s Name: KE SIYUN &nbsp;&nbsp;&nbsp; Presenter’s Std No: MC350809      </p>
             <p>Seminar Title: Customized Image Aesthetics Assessment Method and Applications</p>
             <p>Start time: 2024/11/29 <input type="text" class="fillable_time">:<input type="text" class="fillable_time">&nbsp;&nbsp;&nbsp;        End time: <input type="text" class="fillable_time">:<input type="text" class="fillable_time"></p>
         </div>
@@ -195,12 +195,13 @@
             document.querySelectorAll('.fillable').forEach(input => {
                 if (input.type === 'number' && !input.readOnly) {
                     total += parseFloat(input.value) || 0;
+					total = parseFloat(total.toFixed(1)); // Adjust the number of decimal places as needed
                 }
             });
             document.querySelector('.fillable[readonly]').value = total;
         }
 		function showAlert() {
-			alert("1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload to UMMoodle");
+			alert("0- Open in browser/ 以預設瀏覽器打開 \n1- Fill in your score (overall mark auto-summed)\n2- Click \"Print\" and print as PDF\n3- Upload PDF/screenshot to UMMoodle (DO NOT UPLOAD HTML FILE)");
 		}
     </script>
 
