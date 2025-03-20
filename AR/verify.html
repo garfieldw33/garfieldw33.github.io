@@ -3,6 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+        .table-container {
+            width: 300px; /* Adjust the width as needed */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            max-width: 300px; /* Ensure the cell doesn't exceed the table width */
+            word-wrap: break-word; /* Wrap long content */
+        }
+    </style>
     <title>QSL Verification</title>
     <script>
         async function fetchData() {
@@ -12,7 +27,7 @@
             console.log('Audit:', audit);
             console.log('CAN:', can);
             try {
-                const response = await fetch('data.json');
+                const response = await fetch('https://garfieldw33.github.io/AR/data.json');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -20,19 +35,23 @@
                 console.log('Data fetched:', data);
 
                 if (data[audit] && data[audit].CAN === can) {
+					document.getElementById('message').innerText ='A QSL card has been located:';
                     document.getElementById('my_call').innerText = String(data[audit].MY_CALL);
+					document.getElementById('typep').innerText = String(data[audit].TYPEp);
+
                     document.getElementById('to_radio').innerText = String(data[audit].TO_RADIO);
                     document.getElementById('freq').innerText = String(data[audit].FREQ);
                     document.getElementById('mode').innerText = String(data[audit].MODE);
                     document.getElementById('rst').innerText = String(data[audit].RST);
-                    document.getElementById('utc').innerText = String(data[audit].UTC);
-                    document.getElementById('qthcountry').innerText = String(data[audit].QTHcountry);
-                    document.getElementById('otherend').innerText = String(data[audit].OtherEND);
-                    document.getElementById('typep').innerText = String(data[audit].TYPEp);
-                    document.getElementById('dotp').innerText = String(data[audit].DOTp);
+
+					document.getElementById('dotp').innerText = String(data[audit].DOTp);
+                    document.getElementById('utc').innerText = String(data[audit].UTC);                    
+                    
                     document.getElementById('doip').innerText = String(data[audit].DOIp);
                     document.getElementById('endp').innerText = String(data[audit].ENDp);
                     document.getElementById('mrz').innerText = String(data[audit].MRZ);
+					document.getElementById('sig').innerText = String(data[audit].sig);
+
                 } else {
                     alert('No matching data found.');
                 }
@@ -57,7 +76,8 @@
     <button onclick="fetchData()">Submit</button>
     <!-- <button onclick="showWarning()">Show Warning</button>--> 
 
-    <h2>Data:</h2>
+    <h2>QSL record:</h2>
+	<p><span id="message"></span></p>
     <p>Issued by: <span id="my_call"></span></p>
 	<p>Type: <span id="typep"></span></p>
 
@@ -68,9 +88,21 @@
 
 	<p>Date of transmission: <span id="dotp"></span></p>
     <p>Time (UTC): <span id="utc"></span></p>
-    
+
+    <p>--------------------------</p>
     <p>Date of issue: <span id="doip"></span></p>
-    <p>ENDp: <span id="endp"></span></p>
-    <p>MRZ: <span id="mrz"></span></p>
+    <p>Endorsements: <span id="endp"></span></p>
+    <p><span id="mrz"></span></p>
+	<p>--------------------------</p>
+	<p>RSA for advanced verification (coming soon...): </p>
+	<div class="table-container">
+        <table>
+            <tr>
+                <td>
+                    <p><span id="sig"></span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
