@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSL Verification</title>
+    <script>
+        async function fetchData() {
+            console.log('Button clicked');
+            const audit = document.getElementById('audit').value;
+            const can = document.getElementById('can').value;
+            console.log('Audit:', audit);
+            console.log('CAN:', can);
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Data fetched:', data);
+
+                if (data[audit] && data[audit].CAN === can) {
+                    document.getElementById('my_call').innerText = String(data[audit].MY_CALL);
+                    document.getElementById('to_radio').innerText = String(data[audit].TO_RADIO);
+                    document.getElementById('freq').innerText = String(data[audit].FREQ);
+                    document.getElementById('mode').innerText = String(data[audit].MODE);
+                    document.getElementById('rst').innerText = String(data[audit].RST);
+                    document.getElementById('utc').innerText = String(data[audit].UTC);
+                    document.getElementById('qthcountry').innerText = String(data[audit].QTHcountry);
+                    document.getElementById('otherend').innerText = String(data[audit].OtherEND);
+                    document.getElementById('typep').innerText = String(data[audit].TYPEp);
+                    document.getElementById('dotp').innerText = String(data[audit].DOTp);
+                    document.getElementById('doip').innerText = String(data[audit].DOIp);
+                    document.getElementById('endp').innerText = String(data[audit].ENDp);
+                    document.getElementById('mrz').innerText = String(data[audit].MRZ);
+                } else {
+                    alert('No matching data found.');
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                alert('Error fetching data. Please check the console for more details.');
+            }
+        }
+
+        function showWarning() {
+            alert('This is a warning box!');
+        }
+    </script>
+</head>
+<body>
+    <h1>QSL Verification</h1>
+	<h2>Enter the audit number and 6-digit CAN shown on your card:</h2>
+    <label for="audit">Audit #:</label>
+    <input type="text" id="audit" name="audit">
+    <label for="can">CAN:</label>
+    <input type="text" id="can" name="can">
+    <button onclick="fetchData()">Submit</button>
+    <!-- <button onclick="showWarning()">Show Warning</button>--> 
+
+    <h2>Data:</h2>
+    <p>Issued by: <span id="my_call"></span></p>
+	<p>Type: <span id="typep"></span></p>
+
+    <p>To radio: <span id="to_radio"></span></p>
+    <p>FREQ: <span id="freq"></span></p>
+    <p>MODE: <span id="mode"></span></p>
+    <p>RST: <span id="rst"></span></p>
+
+	<p>Date of transmission: <span id="dotp"></span></p>
+    <p>Time (UTC): <span id="utc"></span></p>
+    
+    <p>Date of issue: <span id="doip"></span></p>
+    <p>ENDp: <span id="endp"></span></p>
+    <p>MRZ: <span id="mrz"></span></p>
+</body>
+</html>
