@@ -20,6 +20,19 @@
     </style>
     <title>QSL Verification</title>
     <script>
+		function getQueryParams() {
+			const params = new URLSearchParams(window.location.search);
+			return {
+				audit: params.get('audit') || '',
+				can: params.get('can') || ''
+			};
+		}
+		function setInputValues() {
+			const { audit, can } = getQueryParams();
+			document.getElementById('audit').value = audit;
+			document.getElementById('can').value = can;
+		}
+		window.onload = setInputValues;
         async function fetchData() {
             console.log('Button clicked');
             const audit = document.getElementById('audit').value;
