@@ -48,7 +48,7 @@
                 console.log('Data fetched:', data);
 
                 if (data[audit] && data[audit].CAN === can) {
-					document.getElementById('message').innerText ='A QSL card has been located:';
+					document.getElementById('message').innerText ='Valid QSL record, details on card:';
                     document.getElementById('my_call').innerText = String(data[audit].MY_CALL);
 					document.getElementById('typep').innerText = String(data[audit].TYPEp);
 
@@ -66,7 +66,7 @@
 					document.getElementById('sig').innerText = String(data[audit].sig);
 
                 } else {
-                    alert('No matching data found.');
+                    alert('No record found.');
                 }
             } catch (error) {
                 console.error('Error fetching data:', error);
